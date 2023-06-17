@@ -1,0 +1,42 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{imakeidx}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage[sorting=none]{biblatex}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{wrapfig}
+
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+\addbibresource{bibliography.bib}
+
+\titleformat{\chapter}
+{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\normalfont\Huge\bfseries}
+
+\title{Decision Trees}
+\author{João Azevedo \\up202008367}
+\date{June 2022}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+%your files here - each chapter is inside a file
+\include{Introduction}
+\include{algorithms}
+\include{implementation}
+\include{results}
+\include{conclusions}
+
+
+%bibliography here
+\printbibliography[heading=bibintoc,title={Bibliography}]
+
+\appendix
+%api here
+\end{document}
