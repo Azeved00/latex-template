@@ -10,12 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Create Zip File
-        run: zip -r fcup-latex-template -i * -x .git .github
-      
       - name: Create Release
         id: create_release
         uses: "marvinpinto/action-automatic-releases@latest"
+        run: zip -r fcup-latex-template -i * -x .git .github
         with:
           title: "Fcup Latex Template"
           automatic_release_tag: "latest"
