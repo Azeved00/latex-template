@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Create Zip File
-        run: zip -r my-repo.zip .
+        run: zip -r fcup-latex-template -i * -x .git .github
       
       - name: Create Release
         id: create_release
@@ -24,4 +24,4 @@ jobs:
             Changes in this release:
             - Describe your changes here
           prerelease: false
-          files: my-repo.zip
+          files: fcup-latex-template.zip
