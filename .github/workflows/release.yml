@@ -1,4 +1,4 @@
-name: Create Release
+name: Automatic Release
 
 on:
   push:
@@ -10,23 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Create Zip File
         run: zip -r my-repo.zip .
       
       - name: Create Release
         id: create_release
         uses: "marvinpinto/action-automatic-releases@latest"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: latest
-          release_name: Release ${{ github.run_number }}
+          title: "Fcup Latex Template"
+          automatic_release_tag: "latest"
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
           body: |
             Changes in this release:
             - Describe your changes here
-          draft: false
           prerelease: false
           files: my-repo.zip
