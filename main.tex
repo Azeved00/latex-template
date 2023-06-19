@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass[11pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{imakeidx}
 \usepackage{indentfirst}
@@ -7,36 +7,34 @@
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \usepackage{wrapfig}
+\usepackage{enumitem}   
 
-\usepackage{graphicx}
+%you can change the logo and some other defenitions here
+\input{src/definitions}
 
-\graphicspath{ {./images/} }
-\addbibresource{bibliography.bib}
-
-\titleformat{\chapter}
-{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\normalfont\Huge\bfseries}
-
-\title{Title of This}
+%Initial page
+\title{The Title}
 \author{The Author}
-\date{The Date}
+\date{June 2023}
 
 
 \begin{document}
-
+\pagenumbering{gobble}% Remove page numbers for first page
 \maketitle
 \tableofcontents
 
-%your files here - each chapter is inside a file
-\include{Introduction}
-\include{algorithms}
-\include{implementation}
-\include{results}
-\include{conclusions}
+
+\pagenumbering{arabic} %start counting pages
+%your files here
+%each chapter is inside a file
+\include{chapters/intro}
+\include{chapters/conclusion}
 
 
-%bibliography here
-\printbibliography[heading=bibintoc,title={Bibliography}]
+%uncomment next like to add bibliography
+%\printbibliography[heading=bibintoc,title={Bibliography}]
 
-\appendix
-%api here
+%In case you want to add an appendix
+% you could you use it for an api for examples
+%\appendix
 \end{document}

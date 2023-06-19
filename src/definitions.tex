@@ -1,0 +1,33 @@
+%clickable index
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%images
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+\addbibresource{bibliography.bib}
+
+%Custom chapter title format
+\titleformat{\chapter}
+{\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\normalfont\Huge\bfseries}
+
+%%custom cape
+\makeatletter         
+    \renewcommand{\maketitle}{
+    \raggedright
+    
+    \begin{center}
+    \includegraphics[width = 9cm]{images/fcup-logo.png}\\[8ex]
+    \vspace{4cm} %5mm vertical space
+    {\Huge \sffamily \@title }\\[4ex] 
+    {\Large  \@author}\\[4ex] 
+    \@date\\[8ex]
+    \end{center}}
+\makeatother
