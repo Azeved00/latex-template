@@ -51,7 +51,8 @@ it will generate what you need to paste on the **bibliography.bib** file
 
     \includegraphics[width = 17cm]{Images/neuralnetwork.png}
 
-    A figure with an image, caption and label (centered)
+A figure with an image, caption and label (centered)
+    
     \begin{figure}[htp]
         \centering
         \centerline{\includegraphics[width = 17cm]{Images/neuralnetwork.png}}
