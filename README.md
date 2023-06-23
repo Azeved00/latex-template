@@ -79,9 +79,16 @@ A figure with an image, caption and label (centered)
           \State $Root \gets \textrm{most probable class}$
          \State \Return $Root$
       \EndIf
-      
-      \State $ \textbf{Attribute } A \gets \textrm{ChoseBestAttribute(Set, Attributes)}$
-      \State $ \textrm{Root's Attribute} \gets A $
+          
+      \Switch{$Q_I.Type$}
+        \Case{$a$}
+            \State a
+        \EndCase
+        \Case{$b$}
+            \State b
+        \EndCase
+    \EndSwitch
+
       
       \For{\textbf{each} value, $V_i$, of A}
       \State $\textrm{Root's children} \gets Main(Set|A = V_i\textrm{, Attributes - A) }$
