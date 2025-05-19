@@ -1,0 +1,8 @@
+\usepackage{xcolor}
+\usepackage{amssymb}
+
+\newcommand{\mynote}[3]{
+   \fbox{\bfseries\sffamily\scriptsize#1}
+   {\small$\blacktriangleright$\textsf{\emph{\color{#3}{#2}}}$\blacktriangleleft$}}
+
+\newcommand{\az}[1]{\mynote{Az}{#1}{red}}

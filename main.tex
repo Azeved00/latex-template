@@ -1,16 +1,8 @@
 \documentclass[11pt,a4paper]{report}
-\usepackage[utf8]{inputenc}
-\usepackage{imakeidx}
-\usepackage{indentfirst}
-\usepackage{titlesec}
-\usepackage[sorting=none]{biblatex}
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage{wrapfig}
-\usepackage{enumitem}   
 
-%you can change the logo and some other defenitions here
-\input{src/definitions}
+\input{src/preamble}
+\input{src/cape}
+\input{src/my_commands}
 
 %Initial page
 \title{The Title}
@@ -25,10 +17,10 @@
 
 
 \pagenumbering{arabic} %start counting pages
+
 %your files here
 %each chapter is inside a file
-\include{chapters/intro}
-\include{chapters/conclusion}
+\include{chapters/g2}
 
 
 %uncomment next like to add bibliography

@@ -1,3 +1,13 @@
+\usepackage[utf8]{inputenc}
+\usepackage{imakeidx}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage[sorting=none]{biblatex}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{wrapfig}
+\usepackage{enumitem}   
+
 %clickable index
 \usepackage{hyperref}
 \hypersetup{
@@ -18,19 +28,6 @@
 \titleformat{\chapter}
 {\normalfont\Huge\bfseries}{\thechapter.}{20pt}{\normalfont\Huge\bfseries}
 
-%custom cape
-\makeatletter         
-    \renewcommand{\maketitle}{    
-        \begin{center}
-        \includegraphics[width = 9cm]{images/fcup-logo.png}\\[8ex]
-        \vspace{5cm} 
-        {\Huge \sffamily \@title }\\[4ex] 
-        \vspace{5cm}
-        {\Large  \@author}\\[4ex] 
-        \@date\\[8ex]
-        \end{center}
-    }
-\makeatother
 
 %switch case
 % New definitions
